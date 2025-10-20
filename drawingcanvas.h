@@ -10,6 +10,7 @@
 #include <iomanip>
 #include <QPixmap>
 #include "CustomMatrix.h"
+#include <vector>
 
 using namespace std;
 using Array3x3 = std::array<std::array<bool, 3>, 3>;
@@ -42,5 +43,9 @@ private:
     QVector<QPoint> m_points;
 
     bool isPaintLinesClicked = false;
+
+    // ADDED for Segment Detection (Objective 3)
+    QVector<QPoint> m_segmentCandidates;
+    bool isDetectionClicked = false;
 };
 #endif // DRAWINGCANVAS_H
